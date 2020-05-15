@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="team" type="com.manwinder.thescoreinterviewapp.data.TeamData"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <TextView
+            android:id="@+id/team_name_text_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_margin="12dp"
+            android:text="@{team.full_name}"
+            tools:text="Toronto Raptors"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/wins_text"/>
+
+        <TextView
+            android:id="@+id/wins_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_margin="6dp"
+            android:text="@string/wins"
+            app:layout_constraintLeft_toRightOf="@id/team_name_text_view"
+            app:layout_constraintRight_toLeftOf="@id/losses_text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/wins_text_view" />
+
+        <TextView
+            android:id="@+id/wins_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:layout_margin="6dp"
+            tools:text="54"
+            android:text="@{String.valueOf(team.wins)}"
+            app:layout_constraintLeft_toLeftOf="@id/wins_text"
+            app:layout_constraintRight_toRightOf="@id/wins_text"
+            app:layout_constraintTop_toBottomOf="@id/wins_text"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/losses_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/losses"
+            app:layout_constraintLeft_toRightOf="@id/wins_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/losses_text_view" />
+
+        <TextView
+            android:id="@+id/losses_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:layout_margin="6dp"
+            tools:text="54"
+            android:text="@{String.valueOf(team.losses)}"
+            app:layout_constraintLeft_toLeftOf="@id/losses_text"
+            app:layout_constraintRight_toRightOf="@id/losses_text"
+            app:layout_constraintTop_toBottomOf="@id/losses_text"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

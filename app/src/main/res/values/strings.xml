@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">The Score Interview App</string>
+    <string name="losses">Losses</string>
+    <string name="wins">Wins</string>
+
+    <string name="position">Position</string>
+    <string name="number_symbol">#</string>
+    <string name="players_fragment_name">playersFragment</string>
+
+    <string name="sort">Sort</string>
+
+    <string name="sort_by_team_name_asc">Sort by team name asc</string>
+    <string name="sort_by_wins_asc">Sort by wins asc</string>
+    <string name="sort_by_losses_asc">Sort by losses asc</string>
+
+    <string name="sort_by_team_name_dsc">Sort by team name dsc</string>
+    <string name="sort_by_wins_dsc">Sort by wins dsc</string>
+    <string name="sort_by_losses_dsc">Sort by losses dsc</string>
+</resources>
